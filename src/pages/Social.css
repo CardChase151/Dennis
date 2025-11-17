@@ -1,0 +1,183 @@
+/* Social Hero */
+.social-hero {
+  padding: 80px 0;
+  color: white;
+}
+
+.social-hero h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.social-tagline {
+  font-size: 20px;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Social Links Section */
+.social-links-section {
+  background: linear-gradient(to bottom, white, var(--sky-blue-light));
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.social-card {
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-gray);
+  padding: 48px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+  border: 3px solid transparent;
+}
+
+.social-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--accent-color, var(--light-blue));
+  transform: scaleX(0);
+  transition: transform var(--transition-smooth);
+}
+
+.social-card:hover {
+  border-color: var(--accent-color, var(--light-blue));
+  transform: translateY(-8px) scale(1.02);
+}
+
+.social-card:hover::before {
+  transform: scaleX(1);
+}
+
+.social-card-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--accent-color, var(--light-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 24px;
+  transition: all var(--transition-smooth);
+}
+
+.social-card:hover .social-card-icon {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.social-card h2 {
+  font-size: 28px;
+  color: var(--primary-navy);
+  margin-bottom: 16px;
+}
+
+.social-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.social-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--accent-color, var(--light-blue));
+  font-weight: 600;
+  font-size: 16px;
+  transition: gap var(--transition-fast);
+}
+
+.social-card:hover .social-card-link {
+  gap: 12px;
+}
+
+/* Why Follow Section */
+.why-follow-section {
+  background: white;
+}
+
+.section-title {
+  font-size: 36px;
+  color: var(--primary-navy);
+}
+
+.feature-card {
+  padding: 32px 24px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  color: var(--primary-navy);
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-gray);
+}
+
+/* CTA */
+.social-cta {
+  color: white;
+}
+
+.cta-title {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .social-hero h1 {
+    font-size: 32px;
+  }
+
+  .social-tagline {
+    font-size: 16px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-card {
+    padding: 32px 24px;
+  }
+
+  .social-card-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .social-card-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}

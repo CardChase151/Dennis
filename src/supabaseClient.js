@@ -1,0 +1,9 @@
+import { createClient } from '@supabase/supabase-js'
+
+// Replace these with your actual Supabase credentials
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || 'https://placeholder.supabase.co'
+const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsYWNlaG9sZGVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDUxOTI4MDAsImV4cCI6MTk2MDc2ODgwMH0.placeholder'
+
+// Create Supabase client
+// Note: This will work with environment variables or use placeholders for development
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)

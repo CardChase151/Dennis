@@ -1,0 +1,390 @@
+.gallery-management {
+  min-height: calc(100vh - 70px);
+  background: var(--sky-blue-light);
+}
+
+.gallery-header {
+  padding: 24px 0 32px;
+  color: white;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.back-btn,
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.back-btn:hover,
+.logout-btn:hover {
+  background: white;
+  color: var(--primary-navy);
+}
+
+.gallery-header h1 {
+  font-size: 32px;
+  color: white;
+}
+
+/* Gallery Content */
+.gallery-content {
+  background: white;
+}
+
+/* Upload Section */
+.upload-section {
+  padding: 32px;
+}
+
+.upload-section h2 {
+  font-size: 24px;
+  color: var(--primary-navy);
+}
+
+.upload-area {
+  border: 3px dashed var(--sky-blue);
+  border-radius: 12px;
+  padding: 48px;
+  text-align: center;
+  transition: all var(--transition-fast);
+  background: var(--sky-blue-light);
+}
+
+.upload-area:hover {
+  border-color: var(--light-blue);
+  background: white;
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary-navy);
+}
+
+.upload-label svg {
+  color: var(--light-blue);
+}
+
+.upload-label span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.upload-label small {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+.selected-files {
+  margin-top: 24px;
+}
+
+.selected-files h3 {
+  font-size: 18px;
+  color: var(--primary-navy);
+  margin-bottom: 12px;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--sky-blue-light);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.remove-file-btn {
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  cursor: pointer;
+  padding: 4px;
+  transition: color var(--transition-fast);
+}
+
+.remove-file-btn:hover {
+  color: #dc2626;
+}
+
+.upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.spinner-icon {
+  animation: spin 1s linear infinite;
+}
+
+/* Top Photos Section */
+.top-photos-section {
+  padding: 24px 32px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  color: var(--primary-navy);
+  margin: 0;
+}
+
+.manage-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.selection-info {
+  color: var(--light-blue);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Photos Section */
+.photos-section {
+  padding: 32px;
+}
+
+.photos-section h2 {
+  font-size: 24px;
+  color: var(--primary-navy);
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.photo-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--sky-blue-light);
+  transition: all var(--transition-fast);
+  border: 3px solid transparent;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-item.selectable {
+  cursor: pointer;
+}
+
+.photo-item.selectable:hover {
+  border-color: var(--light-blue);
+}
+
+.photo-item.selected {
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all var(--transition-fast);
+}
+
+.photo-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+  color: white;
+  transform: scale(1.1);
+}
+
+.top-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.selected-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-state,
+.empty-state {
+  text-align: center;
+  padding: 64px 24px;
+  color: var(--text-gray);
+}
+
+.loading-state .spinner {
+  color: var(--light-blue);
+  margin-bottom: 16px;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-content {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: fadeInUp 0.3s ease;
+}
+
+.modal-content h3 {
+  font-size: 24px;
+  color: var(--primary-navy);
+  margin-bottom: 12px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: var(--text-gray);
+  margin-bottom: 24px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.modal-buttons .btn {
+  padding: 12px 24px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .gallery-header h1 {
+    font-size: 24px;
+  }
+
+  .upload-section,
+  .top-photos-section,
+  .photos-section {
+    padding: 24px 20px;
+  }
+
+  .upload-area {
+    padding: 32px 16px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .manage-buttons {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .manage-buttons .btn {
+    flex: 1;
+  }
+
+  .photos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .back-btn,
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

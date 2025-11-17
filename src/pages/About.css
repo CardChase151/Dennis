@@ -1,0 +1,172 @@
+/* About Hero */
+.about-hero {
+  padding: 80px 0;
+  color: white;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.about-tagline {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* Story Section */
+.about-story {
+  background: linear-gradient(to bottom, white, var(--sky-blue-light));
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.story-image {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.placeholder-image {
+  background: linear-gradient(135deg, var(--primary-navy), var(--medium-navy));
+  aspect-ratio: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-headline);
+  font-size: 24px;
+  font-weight: 700;
+  gap: 8px;
+}
+
+.placeholder-image p:last-child {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.story-content h2 {
+  font-size: 36px;
+  color: var(--primary-navy);
+}
+
+.story-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-gray);
+}
+
+/* Certifications */
+.certifications {
+  background: white;
+}
+
+.section-title {
+  font-size: 36px;
+  color: var(--primary-navy);
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+}
+
+.cert-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--light-blue), var(--medium-navy));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cert-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--primary-navy);
+}
+
+.cert-card p {
+  font-size: 13px;
+  color: var(--text-gray);
+  text-align: center;
+}
+
+/* Why Choose Us */
+.why-choose {
+  background: var(--sky-blue-light);
+}
+
+.why-card {
+  padding: 24px;
+}
+
+.why-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--primary-navy);
+}
+
+.why-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-gray);
+}
+
+/* CTA */
+.about-cta {
+  color: white;
+}
+
+.cta-title {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .cta-title {
+    font-size: 28px;
+  }
+
+  .cert-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cert-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+}
